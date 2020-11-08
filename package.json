@@ -1,0 +1,35 @@
+{
+  "name": "landing-economander",
+  "version": "2.0.0",
+  "description": "A simple and clean discord server landing page",
+  "main": ".",
+  "scripts": {
+    "test": ".",
+    "start": "parcel src/index.pug --out-dir __build --cache-dir __build/.cache",
+    "build": "parcel build src/index.pug --out-dir dist --no-cache"
+  },
+  "keywords": [
+    "pug",
+    "sass",
+    "landing",
+    "discord"
+  ],
+  "author": "orels1",
+  "contributors": [
+    "tobitenno <tobiah@warframe.gg>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "@vue/component-compiler-utils": "^3.1.2",
+    "bootstrap": "^4.5.0",
+    "cssnano": "^4.1.10",
+    "jquery": "^3.5.1",
+    "less": "^3.11.3",
+    "parcel-bundler": "^1.12.4",
+    "popper.js": "^1.16.1",
+    "pug": "^2.0.4",
+    "sass": "^1.26.9"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,48 @@
+- const page = 'scoring'
+include mixins/user
+include mixins/channel
+include mixins/game
+include mixins/card
+
+html
+  include /partials/head.pug
+  head
+    title Economander | Scoring
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner
+        section
+          .text
+            p
+              ul
+                li 
+                  span.green +4/3/2/1
+                  | &nbsp;by Order of Elimination
+                li
+                  span.green +1
+                  | &nbsp;for First Blood (Combat Damage, no&nbsp;
+                  +card('Lightning Bolt')
+                  |)
+                  li
+                    span.green +1
+                    | &nbsp;Casting your Commander 4+ times
+                  li
+                    span.green +1
+                    | &nbsp;Save another player from losing the game
+                  li
+                    span.green +1
+                    | &nbsp;Killing a player with Commander Damage
+                  li
+                    span.red -1
+                    | &nbsp;Killing everyone in the same turn
+                  li
+                    span.red -1
+                    | &nbsp;Attacking the player in last place overall (one time reduction)
+                  li
+                    span.red -1
+                    | &nbsp;Searching for 40 seconds and every 30 seconds after
+                  li
+                    span.red -1
+                    | &nbsp;Not casting your commander
+      include /partials/footer.pug

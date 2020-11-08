@@ -1,0 +1,15 @@
+- const page = 'index'
+include mixins/user
+include mixins/channel
+include mixins/game
+
+html
+  include /partials/head.pug
+  head
+    title Economander | About
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner.d-flex.flex-column
+        include /partials/sections/about.pug
+      include /partials/footer.pug

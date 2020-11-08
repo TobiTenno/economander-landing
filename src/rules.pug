@@ -1,0 +1,29 @@
+- const page = 'rules'
+include mixins/user
+include mixins/channel
+include mixins/game
+
+html
+  include /partials/head.pug
+  head
+    title Economander | Rules
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner
+        section
+          .text
+            p
+              ul
+                li Any Legendary Creature may be your Commander
+                li Normal EDH color identity rules apply
+                li $50.00 USD Budget using&nbsp;
+                  a(href="https://www.cardkingdom.com/?ref=thecanadageeks") Card Kingdom
+                  | &nbsp;prices
+                li Basic Lands and the Commander don't count towards the budget
+                li The 99 may contain commons and uncommons
+                  em only
+                li Normal EDH Banlist &nbsp;
+                  a(href="https://mtgcommander.net/index.php/banned-list/")
+                    i.fas.fa-external-link-alt.fa-xs
+      include /partials/footer.pug
