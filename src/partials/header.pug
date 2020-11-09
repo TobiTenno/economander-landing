@@ -7,10 +7,14 @@
     a(href=`${page === 'scoring' ? '#' : '/scoring.pug'}` class=`${page === 'scoring' ? 'active' : ''}`) Scoring
   if page === 'index'
     .server-info.d-flex.align-items-center.flex-column.text-center
-      h1 Economander
+      h2 Economander
   if page === 'rules'
     .server-info.d-flex.align-items-center.flex-column.text-center
-      h1 Economander | Rules
+      h2 Economander
+        br
+        | Rules
   if page === 'scoring'
     .server-info.d-flex.align-items-center.flex-column.text-center
-      h1 Economander | Scoring
+      h2 Economander
+        br
+        | Scoring
