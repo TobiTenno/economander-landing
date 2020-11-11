@@ -1,4 +1,5 @@
 - const page = 'decklists'
+- const accordion = 'decklist-accordion'
 include mixins/user
 include mixins/channel
 include mixins/game
@@ -7,16 +8,16 @@ include mixins/deck
 html
   include /partials/head.pug
   head
-    title Economander | Rules
+    title Economander | Decklists
   body
     .container.d-flex.flex-column
       include /partials/header.pug
       .inner
         .text
-          div.accordion.dark#decklist-accordion
-            +deck('t5_whyuBS0KGqHE8HrwRCA', 'Basic Birbs', 'decklist-accordion', true)
-            +deck('TvHrNjSAOUyjebVQEu11kg', 'Goreclaw', 'decklist-accordion')
-            +deck('cGCbwd5xTUaHo0UTda6KPQ', 'Drana', 'decklist-accordion')
+          div.accordion.dark(id=`${accordion}`)
+            +deck('t5_whyuBS0KGqHE8HrwRCA', 'Basic Birbs', accordion, true)
+            +deck('TvHrNjSAOUyjebVQEu11kg', 'Goreclaw', accordion)
+            +deck('cGCbwd5xTUaHo0UTda6KPQ', 'Drana', accordion)
       include /partials/footer.pug
       
       
