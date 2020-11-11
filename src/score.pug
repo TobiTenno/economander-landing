@@ -1,0 +1,21 @@
+- const page = 'score'
+include mixins/user
+include mixins/channel
+include mixins/game
+include mixins/deck
+
+html
+  include /partials/head.pug
+  head
+    title Economander | Score
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner
+        section
+          .text
+            h3 Current Score
+          
+      include /partials/footer.pug
+      
+      

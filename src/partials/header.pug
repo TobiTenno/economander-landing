@@ -5,6 +5,13 @@
     a(href=`${page === 'rules' ? '#' : '/rules.pug'}` class=`${page === 'rules' ? 'active' : ''}`) Rules
     .line.align-self-center
     a(href=`${page === 'scoring' ? '#' : '/scoring.pug'}` class=`${page === 'scoring' ? 'active' : ''}`) Scoring
+    .line.align-self-center
+    div.dropdown
+      a.dropdown-toggle(role='button' id='tourney-drop' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        | Tournament
+      div.dropdown-menu(aria-labelledby='tourney-drop')
+        a.dropdown-item(href=`${page === 'decklists' ? '#' : '/decklists.pug'}` class=`${page === 'decklists' ? 'active' : ''}`) Decklists
+        a.dropdown-item(href=`${page === 'score' ? '#' : '/score.pug'}` class=`${page === 'score' ? 'active' : ''}`) Current Score
   if page === 'index'
     .server-info.d-flex.align-items-center.flex-column.text-center
       h2 Economander

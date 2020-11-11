@@ -1,0 +1,17 @@
+mixin deck(id, name, parentId)
+  div.decklist
+    div.card-header.links-supressor(id=`${id}-head`)
+      h2.mb-0
+        button.btn.btn-link.btn-block.text-left(
+          type='button' data-toggle='collapse'
+          data-target=`#${id}` aria-expanded='false'
+          aria-controls=`${id}`)
+          span= name
+    div.card-body.collapse.show(
+      id=`${id}`
+      aria-labelledby=`#${id}-head`
+      data-parent=`#${parentId}`
+      )
+      div.embed-responsive.embed-responsive-16by9.card-body
+        embed.embed-responsive-item.decklist(
+          src=`https://moxfield.com/embed/${id}`)

@@ -1,0 +1,22 @@
+- const page = 'decklists'
+include mixins/user
+include mixins/channel
+include mixins/game
+include mixins/deck
+
+html
+  include /partials/head.pug
+  head
+    title Economander | Rules
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner
+        .text
+          div.accordion.dark#decklist-accordion
+            +deck('t5_whyuBS0KGqHE8HrwRCA', 'Basic Birbs', 'decklist-accordion')
+            +deck('TvHrNjSAOUyjebVQEu11kg', 'Goreclaw', 'decklist-accordion')
+            +deck('cGCbwd5xTUaHo0UTda6KPQ', 'Drana', 'decklist-accordion')
+      include /partials/footer.pug
+      
+      
