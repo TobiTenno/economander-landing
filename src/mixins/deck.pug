@@ -1,4 +1,4 @@
-mixin deck(id, name, parentId)
+mixin deck(id, name, parentId, isFirst = false)
   div.decklist
     div.card-header.links-supressor(id=`${id}-head`)
       h2.mb-0
@@ -7,10 +7,11 @@ mixin deck(id, name, parentId)
           data-target=`#${id}` aria-expanded='false'
           aria-controls=`${id}`)
           span= name
-    div.card-body.collapse.show(
+    div.card-body.collapse(
       id=`${id}`
       aria-labelledby=`#${id}-head`
       data-parent=`#${parentId}`
+      class=`${isFirst ? 'show' : 'collapsed'}`
       )
       div.embed-responsive.embed-responsive-16by9.card-body
         embed.embed-responsive-item.decklist(
