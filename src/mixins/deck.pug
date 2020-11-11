@@ -7,12 +7,10 @@ mixin deck(id, name, parentId, isFirst = false)
           data-target=`#${id}` aria-expanded='false'
           aria-controls=`${id}`)
           span= name
-    div.card-body.collapse(
+    div.card-body.collapse.px-0(
       id=`${id}`
       aria-labelledby=`#${id}-head`
       data-parent=`#${parentId}`
       class=`${isFirst ? 'show' : 'collapsed'}`
       )
-      div.embed-responsive.embed-responsive-16by9.card-body
-        embed.embed-responsive-item.decklist(
-          src=`https://moxfield.com/embed/${id}`)
+      embed.decklist(src=`https://moxfield.com/embed/${id}`)
