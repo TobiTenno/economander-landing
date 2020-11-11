@@ -7,10 +7,9 @@ mixin deck(id, name, parentId, isFirst = false)
           data-target=`#${id}` aria-expanded='false'
           aria-controls=`${id}`)
           span= name
-    div.card-body.collapse.px-0(
+    div.card-body.collapse.px-0.collapsed(
       id=`${id}`
       aria-labelledby=`#${id}-head`
       data-parent=`#${parentId}`
-      class=`${isFirst ? 'show' : 'collapsed'}`
       )
       embed.decklist(src=`https://moxfield.com/embed/${id}`)

@@ -13,9 +13,38 @@ html
       include /partials/header.pug
       .inner
         section
-          .text
-            h3 Current Score
+          .text.mw-100
+            div.table-responsive-lg
+              table.table.table-hover.table-dark.white(style='width: 100%;')
+                thead
+                  tr
+                    th(scope="col") Week
+                    th(scope="col") The Canada Geeks
+                    th(scope="col") Kerplunkasaursus
+                    th(scope="col") Spencer
+                    th(scope="col") Commanders Arsenal
+                    th(scope="col") Necrozach
+                tbody
+                  tr
+                    th(scope="row") 1
+                    td.green +1
+                    td.green +5
+                    td.red 0
+                    td.green +1
+                    td.green +1
+                  tr
+                    th(scope="row") 2
+                    td.green +7
+                    td.green +2
+                    td.green +4
+                    td.green +2
+                    td.red 0
+                  tr
+                    th(scope="row") Total
+                    td 8
+                    td 7
+                    td 4
+                    td 3
+                    td 1
           
       include /partials/footer.pug
-      
-      

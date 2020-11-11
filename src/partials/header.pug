@@ -8,20 +8,21 @@
     .line.align-self-center
     div.dropdown
       a.dropdown-toggle(role='button' id='tourney-drop' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-        | Tournament
+        | League
       div.dropdown-menu(aria-labelledby='tourney-drop')
         a.dropdown-item(href=`${page === 'decklists' ? '#' : '/decklists.pug'}` class=`${page === 'decklists' ? 'active' : ''}`) Decklists
         a.dropdown-item(href=`${page === 'score' ? '#' : '/score.pug'}` class=`${page === 'score' ? 'active' : ''}`) Current Score
-  if page === 'index'
-    .server-info.d-flex.align-items-center.flex-column.text-center
-      h2 Economander
-  if page === 'rules'
-    .server-info.d-flex.align-items-center.flex-column.text-center
-      h2 Economander
+  .server-info.d-flex.align-items-center.flex-column.text-center
+    h2 Economander
+      if page === 'rules'
         br
         | Rules
-  if page === 'scoring'
-    .server-info.d-flex.align-items-center.flex-column.text-center
-      h2 Economander
+      if page === 'scoring'
         br
         | Scoring
+      if page === 'score'
+        br
+        | Current Scores
+      if page === 'decklists'
+        br
+        | Decklists

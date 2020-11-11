@@ -88,13 +88,19 @@ body {
   }
 }
   
+.header, .header:before {
+  height: 350px;
+  width: 100%;
+}
+
 .header {
-  &.index, &.scoring, &.rules, 
-  &.index:before, &.scoring:before, &.rules:before {
-    height: 350px;
+  position: relative;
+  
+  &.no-head, &.no-head:before {
+    height: 75px;
   }
   
-  &.index {
+  &, &.index {
     background: @intro;
     background-size: cover;
     background-position: center center;
@@ -112,14 +118,7 @@ body {
     background-position: center center;
   }
   
-  height: 75px;
-  width: 100%;
-  
-  background-size: 100%;
-  background-position: center center;
-  position: relative;
-  
-  
+
   
   &:before {
     content: '';
@@ -127,8 +126,6 @@ body {
     z-index: 10;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 75px;
     background-image: linear-gradient(45deg, rgba(101,128,233,0.73) 0%, #1E6DB6 100%);
   }
 }
@@ -206,6 +203,10 @@ section {
   .text {
     padding: 40px;
     max-width: 700px;
+    
+    .text.mw-100 {
+      max-width: 100%;
+    }
 
     p {
       font-size: 18px;
@@ -504,8 +505,6 @@ a.mtgcard {
 .small {
   font-size: 0.5em;
 }
-
-
 
 .show > .decklist, .showing > .decklist, .collapsing > .decklist {
   width: 100%;
