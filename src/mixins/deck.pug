@@ -1,13 +1,14 @@
 mixin deck(id, name, parentId, isFirst = false)
   div.decklist
-    div.card-header.links-supressor(id=`${id}-head`)
+    div.card-header(id=`${id}-head`)
       h2.mb-0
         button.btn.btn-link.btn-block.text-left(
-          type='button' data-toggle='collapse'
-          data-target=`#${id}` aria-expanded='false'
+          type='button'
+          data-toggle='collapse'
+          data-target=`#${id}`
           aria-controls=`${id}`)
-          span= name
-    div.card-body.collapse.px-0.collapsed(
+          = name
+    div.card-body.collapse.px-0(
       id=`${id}`
       aria-labelledby=`#${id}-head`
       data-parent=`#${parentId}`
